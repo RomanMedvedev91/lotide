@@ -25,16 +25,13 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-const result = letterPositions("lighthouse in the house");
-assertArraysEqual(result['l'], [0]);
-assertArraysEqual(result['e'], [9, 16, 22]);
+assertArraysEqual(letterPositions("lighthouse in the house")['l'], [0]);
+assertArraysEqual(letterPositions("lighthouse in the house")['e'], [9, 16, 22]);
 
 
-const result2 = letterPositions('hello');
-
-assertArraysEqual(result2['h'], [0]);
-assertArraysEqual(result2['e'], [1]);
-assertArraysEqual(result2['l'], [2, 3]);
-assertArraysEqual(result2['o'], [4]);
+assertArraysEqual(letterPositions('hello')['h'], [0]);
+assertArraysEqual(letterPositions('hello')['e'], [1]);
+assertArraysEqual(letterPositions('hello')['l'], [2, 3]);
+assertArraysEqual(letterPositions('hello')['o'], [4]);
 
 
