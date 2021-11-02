@@ -1,6 +1,14 @@
 const _ = require("../index");
-const assertArraysEqual = require("../assertArraysEqual");
+const assert = require("chai").assert;
 
-assertArraysEqual(_.flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
-assertArraysEqual(_.flatten([1, 2, [3], [4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
-assertArraysEqual(_.flatten([1, 2, [3, [4]], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+describe("#flatten", () => {
+  it("should return [1, 2, 3, 4, 5, 6] for [1, 2, [3, 4], 5, [6]]", () => {
+    assert.deepEqual(_.flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+  });
+  it("should return [1, 2, 3, 4, 5, 6] for [1, 2, [3], [4], 5, [6]]", () => {
+    assert.deepEqual(_.flatten([1, 2, [3], [4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+  });
+  it("should return [1, 2, 3, 4, 5, 6] for [1, 2, [3, [4]], 5, [6]]", () => {
+    assert.deepEqual(_.flatten([1, 2, [3, [4]], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+  });
+});
