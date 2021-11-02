@@ -1,5 +1,4 @@
 const _ = require("../index");
-const assertArraysEqual = require("../assertArraysEqual");
 const assert = require("chai").assert;
 
 describe("#letterPosition", () => {

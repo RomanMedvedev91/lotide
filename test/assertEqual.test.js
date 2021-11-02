@@ -1,7 +1,7 @@
-const assertEqual = require("../assertEqual");
+const _ = require("../index");
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("codding", "Codding");
-assertEqual("3", 3);
-assertEqual("apple", "apple");
+_.assertEqual("Lighthouse Labs", "Bootcamp");
+_.assertEqual(1, 1);
+_.assertEqual("codding", "Codding");
+_.assertEqual("3", 3);
+_.assertEqual("apple", "apple");
